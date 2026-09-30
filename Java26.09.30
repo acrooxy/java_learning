@@ -1,0 +1,80 @@
+public class Main {
+    public static void main(String[] args) {
+
+        // TASK 1 - Pyramid pattern using stars ##
+        System.out.println("Task 1:");
+
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+
+        // TASK 2 - Pyramid pattern using numbers ##
+        System.out.println("\nTask 2:");
+
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+
+
+        // TASK 3 - Armstrong Number ##
+        System.out.println("\nTask 3:");
+
+        int number = 153;
+        int originalNumber = number;
+        int sum = 0;
+
+        while (number > 0) {
+            int digit = number % 10;
+            sum = sum + (digit * digit * digit);
+            number = number / 10;
+        }
+
+        if (sum == originalNumber) {
+            System.out.println(originalNumber + " is an Armstrong number.");
+        } else {
+            System.out.println(originalNumber + " is not an Armstrong number.");
+        }
+
+
+        // TASK 4 - Fibonacci Series ##
+        System.out.println("\nTask 4:");
+
+        int first = 0;
+        int second = 1;
+
+        System.out.print(first + " " + second + " ");
+
+        for (int i = 2; i < 10; i++) {
+            int next = first + second;
+
+            System.out.print(next + " ");
+
+            first = second;
+            second = next;
+        }
+
+        System.out.println();
+
+
+        // TASK 5 - Sum of digits ##
+        System.out.println("\nTask 5:");
+
+        int number2 = 1234;
+        int digitSum = 0;
+
+        while (number2 > 0) {
+            int digit = number2 % 10;
+            digitSum = digitSum + digit;
+            number2 = number2 / 10;
+        }
+
+        System.out.println("Sum of digits = " + digitSum);
+    }
+} // V2.6 2026.09.30
