@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Week2Activity {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 5;
+
+        System.out.println("Add " + (a + b));
+        System.out.println("Subtract " + (a - b));
+        System.out.println("Multiply " + (a * b));
+        System.out.println("Divide " + (a / b));
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int x = input.nextInt();
+
+
+        if (x % 2 == 0) {
+            System.out.println("Number is even");
+        } else {
+            System.out.println("Number is odd");
+        }
+
+    }
+
+}
