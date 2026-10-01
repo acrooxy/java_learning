@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Week2Activity2 {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your mark: ");
+        int mark = scanner.nextInt();
+
+        if (mark >= 70 && mark <= 100) {
+            System.out.println("Distinction");
+        } else if (mark >= 60) {
+            System.out.println("Merit");
+        } else if (mark >= 50) {
+            System.out.println("Second Class");
+        } else if (mark >= 40) {
+            System.out.println("Pass");
+        } else if (mark >= 0) {
+            System.out.println("Fail");
+        } else {
+            System.out.println("Invalid mark");
+        }
+
+        scanner.close();
+    }
+}
