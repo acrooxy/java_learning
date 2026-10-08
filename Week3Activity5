@@ -1,0 +1,30 @@
+public class Week3Activity5 {
+    public static void main(String[] args) {
+
+        class Animal {
+            void makeSound() {
+                System.out.println("Animal makes a sound");
+            }
+        }
+
+        class Dog extends Animal {
+            void makeSound() {
+                System.out.println("Dog says: Woof!");
+            }
+        }
+
+        class Cat extends Animal {
+            void makeSound() {
+                System.out.println("Cat says: Meow!");
+            }
+        }
+
+        Animal animal1 = new Animal();
+        Dog dog1 = new Dog();
+        Cat cat1 = new Cat();
+
+        animal1.makeSound();
+        dog1.makeSound();
+        cat1.makeSound();
+    }
+}
