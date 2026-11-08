@@ -1,0 +1,27 @@
+name: QuickTasks Java tests
+on:
+  push:
+    paths:
+      - 'QuickTasks/**'
+      - '.github/workflows/quicktasks.yml'
+  pull_request:
+    paths:
+      - 'QuickTasks/**'
+      - '.github/workflows/quicktasks.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Compile and test
+        working-directory: QuickTasks
+        run: |
+          javac -encoding UTF-8 QuickTasks.java QuickTasksTest.java
+          java QuickTasksTest
