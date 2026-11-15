@@ -63,10 +63,16 @@ public class CatchTheStars extends JPanel implements ActionListener, KeyListener
         if (!gameOver) {
             if (moveLeft && playerX > 0) {
                 playerX = playerX - 6;
+                if (playerX < 0) {
+                    playerX = 0;
+                }
             }
 
             if (moveRight && playerX < WIDTH - PLAYER_WIDTH) {
                 playerX = playerX + 6;
+                if (playerX > WIDTH - PLAYER_WIDTH) {
+                    playerX = WIDTH - PLAYER_WIDTH;
+                }
             }
 
             starY = starY + starSpeed;
